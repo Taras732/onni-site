@@ -11,13 +11,15 @@ Single-page, двомовний (NL/EN, дефолт нідерландська)
 - `assets/process/` — студія / процес
 - `IDEAS.md` — беклог майбутніх покращень
 
-## ⚠️ Перед запуском — одна зміна
-У `index.html` знайди рядок (на початку `<script>`):
+## ⚠️ Перед запуском — Calendly
+У `index.html` на початку `<script>` (блок CONFIG):
 ```js
-const BOOKING_URL = "https://calendly.com/onni-theartofbeauty";
+const BOOKING_URL  = "https://calendly.com/onni-theartofbeauty"; // реальний лінк Khristina
+const BOOKING_LIVE = false;  // → true, коли сторінка Calendly існує
 ```
-Заміни на справжній Calendly-лінк Khristina. Це **єдине** місце — звідси працюють
-усі кнопки «Afspraak», popup і вбудований календар у секції «Direct boeken».
+- `BOOKING_URL` — звідси працюють усі кнопки «Afspraak» (popup, не виходячи з сайту).
+- `BOOKING_LIVE = false` → у секції «Kies je moment» показується **гарна боккартка з кнопкою** (нічого не порожнє).
+- `BOOKING_LIVE = true` → там автоматично з'являється **вбудований календар** у фірмових кольорах.
 
 ## Бронювання
 - Усі кнопки `.book-link` відкривають Calendly **popup** (не виходячи з сайту).
