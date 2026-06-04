@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>onni — the art of beauty · Manicure & Pedicure Rotterdam</title>
+<meta name="description" content="onni — the art of beauty. Manicure, BIAB, pedicure en nail art in het hart van Rotterdam. Boek eenvoudig online je afspraak bij nail artist Khristina." />
+<meta name="theme-color" content="#0B2A23" />
+<meta property="og:title" content="onni — the art of beauty" />
+<meta property="og:description" content="Manicure, BIAB, pedicure & nail art in Rotterdam. Boek online." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/portfolio/emerald-gold.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0B2A23; --bg-2:#0E332B; --card:#123C32; --card-2:#16463A;
+  --emerald:#1C5A49; --emerald-deep:#07201A;
+  --gold:#C9A86A; --gold-light:#E6CF9B; --gold-soft:#A98B52;
+  --cream:#F5ECDC; --sage:#9CB4A9; --line:rgba(201,168,106,.20);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Jost',sans-serif;font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Cormorant Garamond',serif;line-height:1.02;letter-spacing:.005em;font-weight:600}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 26px}
+.grain{position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+[data-lang="nl"] .l-en{display:none}
+[data-lang="en"] .l-nl{display:none}
+
+.eyebrow{font-family:'Jost';font-weight:500;font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:13px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold);opacity:.6}
+
+/* logo wordmark */
+.logo{display:inline-flex;flex-direction:column;text-decoration:none;line-height:1;cursor:pointer}
+.logo .wm{font-family:'Cormorant Garamond';font-weight:600;font-size:1.85rem;letter-spacing:.04em;color:var(--cream);transition:.2s;position:relative;display:inline-block}
+.logo .wm .dot{color:var(--gold)}
+.logo:hover .wm{color:var(--gold-light)}
+.logo .tag{font-family:'Jost';font-weight:400;font-size:.46rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-top:3px;padding-left:3px}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:16px 26px;background:linear-gradient(180deg,rgba(7,32,26,.94),transparent);backdrop-filter:blur(8px);transition:padding .3s,background .3s}
+nav.scrolled{padding:11px 26px;background:rgba(7,32,26,.96)}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-family:'Jost';font-weight:500;font-size:.8rem;letter-spacing:.06em;color:var(--cream);text-decoration:none;opacity:.85;transition:.2s;position:relative;text-transform:uppercase}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--gold);transition:width .25s}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang{display:flex;gap:1px;font-family:'Jost';font-weight:600;font-size:.74rem;letter-spacing:.05em;align-items:center}
+.lang button{background:none;border:none;color:var(--sage);cursor:pointer;font:inherit;padding:5px 7px;transition:.2s;border-radius:5px}
+.lang button.active{color:var(--emerald-deep);background:var(--gold)}
+.lang span{color:rgba(201,168,106,.4)}
+.nav-cta{font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--emerald-deep);background:var(--gold);padding:11px 20px;border-radius:40px;transition:.25s;white-space:nowrap;border:none;cursor:pointer}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:flex-end;padding-bottom:7vh;overflow:hidden;position:relative}
+.hero-media{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center 22%}
+.hero-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,32,26,.42),rgba(7,32,26,.55) 55%,var(--bg)),radial-gradient(80% 70% at 18% 92%,rgba(28,90,73,.55),transparent 60%)}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero h1{font-weight:600;font-size:clamp(4.5rem,16vw,13rem);color:var(--cream);letter-spacing:-.01em}
+.hero h1 .dot{color:var(--gold-light)}
+.hero .tagline{font-family:'Jost';font-weight:400;font-size:.8rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin:8px 0 0 6px}
+.hero-sub{max-width:540px;margin-top:24px;font-size:1.2rem;color:var(--cream);font-weight:300}
+.hero-sub b{color:var(--gold-light);font-weight:500}
+.hero-actions{display:flex;gap:13px;margin-top:34px;flex-wrap:wrap}
+.btn{font-family:'Jost';font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:16px 32px;border-radius:50px;display:inline-flex;align-items:center;gap:9px;transition:transform .3s,box-shadow .3s,background .3s,color .3s,border-color .3s;cursor:pointer;border:none;font-family:'Jost'}
+.btn-primary{background:var(--gold);color:var(--emerald-deep)}
+.btn-primary:hover{background:var(--gold-light);box-shadow:0 14px 44px rgba(201,168,106,.32);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--cream);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* trust strip */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--emerald-deep)}
+.trust .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px}
+.trust .ti{display:flex;align-items:center;gap:11px;font-size:.84rem;color:var(--sage);letter-spacing:.02em}
+.trust .ti svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.6;flex:none}
+
+.sec{padding:120px 0}
+.sec-head{max-width:720px;margin-bottom:48px}
+.sec-head h2{font-weight:600;font-size:clamp(2.6rem,6vw,4.4rem);margin-top:14px}
+.sec-head h2 i{font-style:italic;color:var(--gold-light)}
+.sec-head p{margin-top:16px;color:var(--sage);font-size:1.1rem;font-weight:300}
+
+/* ===== menu (prices) ===== */
+.menu-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{font-family:'Jost';font-weight:500;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);background:transparent;border:1px solid var(--line);border-radius:40px;padding:10px 18px;cursor:pointer;transition:.22s}
+.tab:hover{color:var(--cream);border-color:var(--gold-soft)}
+.tab.active{color:var(--emerald-deep);background:var(--gold);border-color:var(--gold)}
+.menu{border-top:1px solid var(--line)}
+.svc-row{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;background:transparent;border:none;border-bottom:1px solid var(--line);padding:20px 4px;cursor:pointer;color:inherit;font-family:'Jost';transition:padding-left .3s,background .3s}
+.svc-row:hover{padding-left:16px;background:linear-gradient(90deg,rgba(201,168,106,.06),transparent)}
+.svc-nm{font-size:1.18rem;font-weight:300;color:var(--cream);white-space:nowrap;display:flex;align-items:baseline;gap:10px}
+.svc-row:hover .svc-nm{color:var(--gold-light)}
+.svc-nm .sigtag{font-family:'Jost';font-weight:600;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-deep);background:var(--gold);padding:3px 8px;border-radius:20px;transform:translateY(-2px)}
+.svc-nm em{font-style:normal;color:var(--sage);font-size:.8rem;font-weight:300}
+.svc-lead{flex:1;border-bottom:1px dotted rgba(201,168,106,.35);transform:translateY(-4px);min-width:24px}
+.svc-pr{font-family:'Cormorant Garamond';font-weight:600;font-size:1.55rem;color:var(--gold-light);white-space:nowrap;display:flex;align-items:center;gap:12px}
+.svc-pr .go{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;opacity:0;transform:translateX(-6px);transition:.28s}
+.svc-pr .go svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2}
+.svc-row:hover .svc-pr .go{opacity:1;transform:translateX(0)}
+.svc-row[hidden]{display:none}
+.menu-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:36px;padding:26px 30px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--card-2),var(--card))}
+.menu-cta p{color:var(--sage);font-weight:300;font-size:.96rem;max-width:520px}
+.menu-cta p b{color:var(--cream);font-weight:500}
+.svc-note{color:var(--sage);font-size:.84rem;margin-top:18px;font-weight:300}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why-item{padding:32px 26px;border:1px solid var(--line);border-radius:14px;background:var(--bg-2);transition:transform .4s,border-color .4s}
+.why-item:hover{transform:translateY(-5px);border-color:var(--gold-soft)}
+.why-item .ic{font-family:'Cormorant Garamond';font-weight:700;font-size:2.4rem;color:var(--gold);margin-bottom:12px;font-style:italic}
+.why-item h3{font-weight:600;font-size:1.45rem;margin-bottom:8px}
+.why-item p{color:var(--sage);font-size:.94rem;font-weight:300}
+
+/* ===== gallery ===== */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gtile{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;border:1px solid var(--line);aspect-ratio:4/5;background:var(--card)}
+.gtile.tall{grid-row:span 2;aspect-ratio:auto}
+.gtile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.9,.2,1)}
+.gtile:hover img{transform:scale(1.07)}
+.gtile .cap{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;font-family:'Jost';font-weight:500;font-size:.82rem;letter-spacing:.04em;color:var(--cream);background:linear-gradient(180deg,transparent,rgba(7,32,26,.82));opacity:0;transform:translateY(8px);transition:.35s}
+.gtile:hover .cap{opacity:1;transform:translateY(0)}
+.gtile .plus{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(7,32,26,.5);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--gold-light);opacity:0;transition:.3s;backdrop-filter:blur(4px)}
+.gtile:hover .plus{opacity:1}
+.gtile .plus svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.gallery-foot{text-align:center;margin-top:36px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:5000;background:rgba(5,20,16,.92);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.lb.open{display:flex;opacity:1}
+.lb img{max-width:88vw;max-height:80vh;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.6);object-fit:contain}
+.lb .lb-cap{position:absolute;bottom:5vh;left:0;right:0;text-align:center;font-family:'Cormorant Garamond';font-style:italic;font-size:1.4rem;color:var(--gold-light)}
+.lb-btn{position:absolute;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--cream);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
+.lb-btn:hover{background:var(--gold);color:var(--emerald-deep);border-color:var(--gold)}
+.lb-btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
+.lb-prev{left:3vw;top:50%;transform:translateY(-50%)}
+.lb-next{right:3vw;top:50%;transform:translateY(-50%)}
+.lb-close{top:3vh;right:3vw}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step{position:relative;padding:32px 28px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.step .n{font-family:'Cormorant Garamond';font-weight:700;font-style:italic;font-size:3.4rem;color:var(--emerald);line-height:1}
+.step h3{font-weight:600;font-size:1.5rem;margin:8px 0 8px}
+.step p{color:var(--sage);font-size:.96rem;font-weight:300}
+
+/* about */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.about-media{aspect-ratio:4/5;border-radius:16px;background-size:cover;background-position:center;border:1px solid var(--line)}
+.about-text h2{font-weight:600;font-size:clamp(2.2rem,5vw,3.6rem)}
+.about-text h2 i{font-style:italic;color:var(--gold-light)}
+.about-text p{color:var(--sage);margin-top:20px;font-weight:300;font-size:1.06rem}
+.about-text .sig{font-family:'Cormorant Garamond';font-style:italic;font-size:1.9rem;color:var(--gold-light);margin-top:24px}
+
+/* booking */
+.booking{background:radial-gradient(70% 100% at 50% 0%,rgba(28,90,73,.42),transparent 60%)}
+.cal-wrap{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);min-height:640px}
+.calendly-inline-widget{min-width:320px;height:680px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+.map-frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:420px;position:relative}
+.map-frame iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.3) contrast(1.04) brightness(.92)}
+.cline{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.cline .ci{width:46px;height:46px;border-radius:11px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--gold);flex:none}
+.cline .ci svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cline .ct .k{font-family:'Jost';font-weight:500;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+.cline .ct .v{font-size:1.1rem;color:var(--cream);margin-top:3px;font-weight:300}
+.cline .ct .v a{color:inherit;text-decoration:none;border-bottom:1px solid var(--gold)}
+.soc-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.soc{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;color:var(--cream);transition:.25s;text-decoration:none}
+.soc:hover{background:var(--gold);border-color:var(--gold);color:var(--emerald-deep);transform:translateY(-3px)}
+.soc svg{width:21px;height:21px}
+
+.final{text-align:center;padding:140px 0;position:relative;overflow:hidden;background:radial-gradient(70% 90% at 50% 0%,rgba(28,90,73,.5),transparent 65%)}
+.final h2{font-weight:600;font-size:clamp(2.8rem,8vw,5.6rem)}
+.final h2 i{font-style:italic;color:var(--gold-light)}
+.final p{color:var(--sage);margin:18px auto 34px;max-width:480px;font-weight:300}
+
+footer{border-top:1px solid var(--line);padding:56px 0 38px;background:var(--bg-2)}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot a{color:var(--sage);text-decoration:none;display:block;margin-top:8px;transition:.2s;font-weight:300}
+.foot a:hover{color:var(--gold)}
+.foot small.cr{color:var(--sage);opacity:.6;display:block;margin-top:24px;font-size:.8rem}
+
+/* sticky mobile book bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:900;display:none;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(7,32,26,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.mbar .btn{width:100%;justify-content:center}
+
+.reveal{opacity:0;transform:translateY(40px)}
+
+@media(max-width:1080px){
+  .why{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .nav-links{gap:16px}.nav-links a{font-size:.72rem}
+}
+@media(max-width:720px){
+  .why,.steps{grid-template-columns:1fr}
+  .about,.contact{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);gap:10px}
+  .gtile.tall{grid-row:span 1;aspect-ratio:4/5}
+  .nav-links{display:none}.nav-cta{display:none}
+  .sec{padding:72px 0}.wrap{padding:0 18px}
+  .hero{padding-bottom:11vh}
+  .hero h1{font-size:clamp(4rem,22vw,7rem)}
+  .hero-sub{font-size:1.05rem}
+  .svc-nm{font-size:1.05rem;white-space:normal}
+  .map-frame,.map-frame iframe{min-height:320px}
+  nav{padding:13px 18px}
+  .mbar{display:block}
+  body{padding-bottom:74px}
+  .lb-prev{left:2vw}.lb-next{right:2vw}
+}
+</style>
+</head>
+<body data-lang="nl">
+<div class="grain"></div>
+
+<nav id="nav">
+  <a class="logo" href="#top">
+    <span class="wm">onn<span class="dot">i</span></span>
+    <span class="tag">the art of beauty</span>
+  </a>
+  <div class="nav-links">
+    <a href="#services"><span class="l-nl">Diensten</span><span class="l-en">Services</span></a>
+    <a href="#gallery"><span class="l-nl">Werk</span><span class="l-en">Work</span></a>
+    <a href="#about"><span class="l-nl">Over mij</span><span class="l-en">About</span></a>
+    <a href="#contact"><span class="l-nl">Contact</span><span class="l-en">Contact</span></a>
+  </div>
+  <div class="nav-right">
+    <div class="lang" id="lang">
+      <button data-set="nl" class="active">NL</button><span>/</span><button data-set="en">EN</button>
+    </div>
+    <button class="nav-cta book-link"><span class="l-nl">Afspraak</span><span class="l-en">Book now</span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-media" style="background-image:url('assets/owner/khristina-portrait.jpg')"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-inner wrap">
+    <span class="eyebrow" data-rev>Rotterdam · Manicure · Pedicure</span>
+    <h1 data-rev>onn<span class="dot">i</span></h1>
+    <div class="tagline" data-rev>the art of beauty</div>
+    <p class="hero-sub" data-rev>
+      <span class="l-nl">De kunst van verzorgde nagels. <b>Manicure, BIAB, pedicure</b> en nail art in het hart van Rotterdam — met zorg, hygiëne en oog voor detail.</span>
+      <span class="l-en">The art of beautifully cared-for nails. <b>Manicure, BIAB, pedicure</b> and nail art in the heart of Rotterdam — with care, hygiene and an eye for detail.</span>
+    </p>
+    <div class="hero-actions" data-rev>
+      <button class="btn btn-primary magnetic book-link"><span class="l-nl">Afspraak maken →</span><span class="l-en">Book appointment →</span></button>
+      <a class="btn btn-ghost" href="#services"><span class="l-nl">Bekijk prijzen</span><span class="l-en">View prices</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="wrap">
+    <div class="ti"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span class="l-nl">Gesteriliseerd gereedschap</span><span class="l-en">Sterilised tools</span></div>
+    <div class="ti"><svg viewBox="0 0 24 24"><path d="M12 3c2.5 3 4 5.5 4 8a4 4 0 11-8 0c0-2.5 1.5-5 4-8z"/></svg><span class="l-nl">Professionele producten</span><span class="l-en">Professional products</span></div>
+    <div class="ti"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="l-nl">Op afspraak — geen wachttijd</span><span class="l-en">By appointment — no waiting</span></div>
+    <div class="ti"><svg viewBox="0 0 24 24"><path d="M5 8h14M5 12h14M5 16h14"/></svg>🇳🇱 🇬🇧 🇺🇦</div>
+  </div>
+</div>
+
+<!-- SERVICES / MENU -->
+<section class="sec wrap" id="services">
+  <div class="sec-head">
+    <span class="eyebrow reveal"><span class="l-nl">Diensten & prijzen</span><span class="l-en">Services & prices</span></span>
+    <h2 class="reveal"><span class="l-nl">De <i>menukaart</i></span><span class="l-en">The <i>menu</i></span></h2>
+    <p class="reveal"><span class="l-nl">Heldere prijzen, professionele producten en gesteriliseerd gereedschap. Tik op een behandeling om direct te boeken.</span><span class="l-en">Clear pricing, professional products and sterilised tools. Tap a treatment to book it directly.</span></p>
+  </div>
+
+  <div class="menu-top reveal">
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-cat="all"><span class="l-nl">Alles</span><span class="l-en">All</span></button>
+      <button class="tab" data-cat="manicure">Manicure</button>
+      <button class="tab" data-cat="pedicure">Pedicure</button>
+      <button class="tab" data-cat="art">Nail Art</button>
+      <button class="tab" data-cat="men"><span class="l-nl">Mannen</span><span class="l-en">Men's</span></button>
+    </div>
+  </div>
+
+  <div class="menu" id="menu">
+    <!-- manicure -->
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="l-nl">Klassieke manicure</span><span class="l-en">Classic manicure</span></span><span class="svc-lead"></span><span class="svc-pr">€50<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="l-nl">Japanse manicure</span><span class="l-en">Japanese manicure</span></span><span class="svc-lead"></span><span class="svc-pr">€55<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="l-nl">Manicure + gellak</span><span class="l-en">Manicure + gel polish</span></span><span class="svc-lead"></span><span class="svc-pr">€70<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="sigtag">BIAB</span><span class="l-nl">Manicure + BIAB <em>(1–3 nagels herstel)</em></span><span class="l-en">Manicure + BIAB <em>(1–3 nails repair)</em></span></span><span class="svc-lead"></span><span class="svc-pr">€85<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="l-nl">Nieuwe set nagelverlenging</span><span class="l-en">New set nail extension</span></span><span class="svc-lead"></span><span class="svc-pr">€105<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="l-nl">Verlenging bijvullen</span><span class="l-en">Extension refill</span></span><span class="svc-lead"></span><span class="svc-pr">€95<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="l-nl">Verwijderen werk ander salon</span><span class="l-en">Coating removal (other master)</span></span><span class="svc-lead"></span><span class="svc-pr">€5<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="manicure"><span class="svc-nm"><span class="l-nl">Verwijderen zonder nieuwe lak <em>(excl. manicure)</em></span><span class="l-en">Remove without new polish <em>(excl. manicure)</em></span></span><span class="svc-lead"></span><span class="svc-pr">€25<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <!-- pedicure -->
+    <button class="svc-row book-link" data-cat="pedicure"><span class="svc-nm"><span class="sigtag">Smart</span>SMART Pedicure</span><span class="svc-lead"></span><span class="svc-pr">€70<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="pedicure"><span class="svc-nm"><span class="l-nl">Pedicure + gellak</span><span class="l-en">Pedicure + gel polish</span></span><span class="svc-lead"></span><span class="svc-pr">€85<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="pedicure"><span class="svc-nm"><span class="l-nl">Alleen tenen + gellak</span><span class="l-en">Only toes + gel polish</span></span><span class="svc-lead"></span><span class="svc-pr">€70<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="pedicure"><span class="svc-nm"><span class="l-nl">Pedicure + gewone lak</span><span class="l-en">Pedicure + regular polish</span></span><span class="svc-lead"></span><span class="svc-pr">€70<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <!-- nail art -->
+    <button class="svc-row book-link" data-cat="art"><span class="svc-nm">French</span><span class="svc-lead"></span><span class="svc-pr">€10<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="art"><span class="svc-nm">Nail Art</span><span class="svc-lead"></span><span class="svc-pr">€10–15<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="art"><span class="svc-nm">Ombre</span><span class="svc-lead"></span><span class="svc-pr">€15<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="art"><span class="svc-nm"><span class="l-nl">Versteviging</span><span class="l-en">Strengthening</span></span><span class="svc-lead"></span><span class="svc-pr">€10<span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <!-- men -->
+    <button class="svc-row book-link" data-cat="men"><span class="svc-nm"><span class="l-nl">Mannenmanicure</span><span class="l-en">Men's manicure</span></span><span class="svc-lead"></span><span class="svc-pr"><span class="l-nl" style="font-size:1rem;font-family:Jost;font-weight:300;color:var(--sage)">op aanvraag</span><span class="l-en" style="font-size:1rem;font-family:Jost;font-weight:300;color:var(--sage)">on request</span><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+    <button class="svc-row book-link" data-cat="men"><span class="svc-nm"><span class="l-nl">Mannenpedicure</span><span class="l-en">Men's pedicure</span></span><span class="svc-lead"></span><span class="svc-pr"><span class="l-nl" style="font-size:1rem;font-family:Jost;font-weight:300;color:var(--sage)">op aanvraag</span><span class="l-en" style="font-size:1rem;font-family:Jost;font-weight:300;color:var(--sage)">on request</span><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></button>
+  </div>
+
+  <div class="menu-cta reveal">
+    <p><span class="l-nl"><b>Niet zeker wat je nodig hebt?</b> Boek een manicure-afspraak — we bepalen samen de beste behandeling voor jouw nagels.</span><span class="l-en"><b>Not sure what you need?</b> Book a manicure appointment — we'll determine the best treatment for your nails together.</span></p>
+    <button class="btn btn-primary book-link"><span class="l-nl">Afspraak maken →</span><span class="l-en">Book appointment →</span></button>
+  </div>
+  <p class="svc-note reveal"><span class="l-nl">* Alle prijzen in euro. Definitieve prijs hangt af van de staat van je nagels en de gewenste lengte/design.</span><span class="l-en">* All prices in euro. Final price depends on the condition of your nails and the desired length/design.</span></p>
+</section>
+
+<!-- WHY -->
+<section class="sec wrap">
+  <div class="sec-head"><span class="eyebrow reveal"><span class="l-nl">Waarom onni</span><span class="l-en">Why onni</span></span><h2 class="reveal"><span class="l-nl">Waarom klanten <i>terugkomen</i></span><span class="l-en">Why clients <i>come back</i></span></h2></div>
+  <div class="why">
+    <div class="why-item reveal"><div class="ic">01</div><h3><span class="l-nl">Hygiëne voorop</span><span class="l-en">Hygiene first</span></h3><p><span class="l-nl">Gesteriliseerd gereedschap en wegwerpmaterialen bij elke afspraak.</span><span class="l-en">Sterilised tools and single-use materials at every appointment.</span></p></div>
+    <div class="why-item reveal"><div class="ic">02</div><h3><span class="l-nl">BIAB & versterking</span><span class="l-en">BIAB & strength</span></h3><p><span class="l-nl">Gezonde, sterke nagels — ook zonder verlenging. Ideaal voor zwakke nagels.</span><span class="l-en">Healthy, strong nails — even without extensions. Ideal for weak nails.</span></p></div>
+    <div class="why-item reveal"><div class="ic">03</div><h3><span class="l-nl">Persoonlijke aandacht</span><span class="l-en">Personal attention</span></h3><p><span class="l-nl">Eén-op-één in een rustige sfeer. Jouw nagels, jouw stijl.</span><span class="l-en">One-on-one in a calm setting. Your nails, your style.</span></p></div>
+    <div class="why-item reveal"><div class="ic">04</div><h3><span class="l-nl">Ervaren nail artist</span><span class="l-en">Experienced artist</span></h3><p><span class="l-nl">Van clean nude tot fijne nail art — afgewerkt tot in detail.</span><span class="l-en">From clean nude to delicate nail art — finished to the detail.</span></p></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec wrap" id="gallery">
+  <div class="sec-head"><span class="eyebrow reveal">Portfolio</span><h2 class="reveal"><span class="l-nl">Recent <i>werk</i></span><span class="l-en">Recent <i>work</i></span></h2><p class="reveal"><span class="l-nl">Een greep uit afgeronde sets. Tik voor groot.</span><span class="l-en">A selection of finished sets. Tap to enlarge.</span></p></div>
+  <div class="gallery" id="gallery-grid">
+    <!-- tiles injected by JS -->
+  </div>
+  <div class="gallery-foot reveal">
+    <a class="btn btn-ghost" href="https://www.instagram.com/onni_theartofbeauty" target="_blank" rel="noopener"><span class="l-nl">Meer op Instagram →</span><span class="l-en">More on Instagram →</span></a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec wrap">
+  <div class="sec-head"><span class="eyebrow reveal"><span class="l-nl">Afspraak</span><span class="l-en">Booking</span></span><h2 class="reveal"><span class="l-nl">Zo werkt het</span><span class="l-en">How it works</span></h2><p class="reveal"><span class="l-nl">Drie stappen — en je zit ontspannen in de stoel.</span><span class="l-en">Three steps — and you're relaxing in the chair.</span></p></div>
+  <div class="steps">
+    <div class="step reveal"><div class="n">1</div><h3><span class="l-nl">Boek online</span><span class="l-en">Book online</span></h3><p><span class="l-nl">Kies je behandeling en tijd. Direct bevestigd, geen gedoe.</span><span class="l-en">Pick your treatment and time. Instantly confirmed, no hassle.</span></p></div>
+    <div class="step reveal"><div class="n">2</div><h3><span class="l-nl">Kom langs</span><span class="l-en">Come over</span></h3><p><span class="l-nl">Mariniersweg 313, Rotterdam. We bespreken kort wat je wilt.</span><span class="l-en">Mariniersweg 313, Rotterdam. We briefly discuss what you'd like.</span></p></div>
+    <div class="step reveal"><div class="n">3</div><h3><span class="l-nl">Geniet</span><span class="l-en">Enjoy</span></h3><p><span class="l-nl">Ontspan terwijl ik je nagels verzorg. Je loopt stralend naar buiten.</span><span class="l-en">Relax while I take care of your nails. You leave glowing.</span></p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec wrap" id="about"><div class="about">
+  <div class="about-media reveal" style="background-image:url('assets/owner/khristina-2.jpg')"></div>
+  <div class="about-text">
+    <span class="eyebrow reveal"><span class="l-nl">De nail artist</span><span class="l-en">The nail artist</span></span>
+    <h2 class="reveal" style="margin-top:14px"><span class="l-nl">Hallo, ik ben <i>Khristina</i></span><span class="l-en">Hi, I'm <i>Khristina</i></span></h2>
+    <p class="reveal"><span class="l-nl">Achter onni sta ik — nail artist in Rotterdam. Ik geloof dat verzorgde nagels een klein ritueel van zelfzorg zijn: even tijd voor jezelf, in een rustige en hygiënische omgeving.</span><span class="l-en">Behind onni it's me — a nail artist in Rotterdam. I believe well-cared-for nails are a small ritual of self-care: a moment for yourself, in a calm and hygienic space.</span></p>
+    <p class="reveal"><span class="l-nl">Of je nu gaat voor een clean nude, sterke BIAB of fijne nail art — ik werk nauwkeurig, met professionele producten, tot je tevreden bent. 🇺🇦 🇬🇧 🇳🇱</span><span class="l-en">Whether you want a clean nude, strong BIAB or delicate nail art — I work precisely, with professional products, until you're happy. 🇺🇦 🇬🇧 🇳🇱</span></p>
+    <div class="sig reveal">Khristina · onni</div>
+  </div>
+</div></section>
+
+<!-- BOOKING (inline calendly) -->
+<section class="sec booking" id="book">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:680px;margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center"><span class="l-nl">Direct boeken</span><span class="l-en">Book directly</span></span>
+      <h2 style="margin-top:14px"><span class="l-nl">Kies je <i>moment</i></span><span class="l-en">Pick your <i>moment</i></span></h2>
+      <p><span class="l-nl">Selecteer hieronder een dag en tijd — je afspraak is meteen bevestigd.</span><span class="l-en">Select a day and time below — your appointment is confirmed instantly.</span></p>
+    </div>
+    <div class="cal-wrap reveal">
+      <div class="calendly-inline-widget" data-booking-inline data-resize="true"></div>
+      <noscript><p style="padding:40px;text-align:center">Ga naar <a href="#" id="cal-fallback">Calendly</a> om te boeken.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec wrap" id="contact">
+  <div class="sec-head"><span class="eyebrow reveal">Contact</span><h2 class="reveal"><span class="l-nl">Kom langs in <i>Rotterdam</i></span><span class="l-en">Visit us in <i>Rotterdam</i></span></h2></div>
+  <div class="contact">
+    <div class="map-frame reveal">
+      <iframe src="https://maps.google.com/maps?q=Mariniersweg%20313%2C%203011%20NM%20Rotterdam&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div>
+      <div class="cline reveal"><div class="ci"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0114 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div class="ct"><div class="k">Adres</div><div class="v">Mariniersweg 313, 3011 NM Rotterdam</div></div></div>
+      <div class="cline reveal"><div class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg></div><div class="ct"><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/onni_theartofbeauty" target="_blank" rel="noopener">@onni_theartofbeauty</a></div></div></div>
+      <div class="cline reveal"><div class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><div class="ct"><div class="k"><span class="l-nl">Afspraak</span><span class="l-en">Booking</span></div><div class="v"><a class="book-link" href="#book"><span class="l-nl">Online boeken</span><span class="l-en">Book online</span></a></div></div></div>
+      <div class="cline reveal"><div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></div><div class="ct"><div class="k"><span class="l-nl">Op afspraak</span><span class="l-en">By appointment</span></div><div class="v"><span class="l-nl">Dagen & tijden in de agenda</span><span class="l-en">Days & times in the calendar</span></div></div></div>
+      <button class="btn btn-primary magnetic book-link reveal" style="margin:26px 0 6px"><span class="l-nl">Afspraak maken →</span><span class="l-en">Book appointment →</span></button>
+      <div class="soc-row reveal">
+        <a class="soc" href="https://www.instagram.com/onni_theartofbeauty" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="soc" href="https://maps.google.com/maps?q=Mariniersweg%20313%2C%203011%20NM%20Rotterdam" target="_blank" rel="noopener" aria-label="Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 0114 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal"><span class="l-nl">Klaar voor mooie <i>nagels?</i></span><span class="l-en">Ready for beautiful <i>nails?</i></span></h2>
+    <p class="reveal"><span class="l-nl">Boek online bij onni — en gun jezelf een moment van zorg.</span><span class="l-en">Book online at onni — and give yourself a moment of care.</span></p>
+    <button class="btn btn-primary magnetic book-link reveal"><span class="l-nl">Afspraak maken →</span><span class="l-en">Book appointment →</span></button>
+  </div>
+</section>
+
+<footer><div class="wrap foot">
+  <div><a class="logo" href="#top"><span class="wm">onn<span class="dot">i</span></span><span class="tag">the art of beauty</span></a><a href="https://www.instagram.com/onni_theartofbeauty" target="_blank" rel="noopener">Rotterdam · Manicure · Pedicure</a></div>
+  <div>
+    <a href="https://www.instagram.com/onni_theartofbeauty" target="_blank" rel="noopener">Instagram · @onni_theartofbeauty</a>
+    <a class="book-link" href="#book"><span class="l-nl">Afspraak · online boeken</span><span class="l-en">Booking · book online</span></a>
+  </div>
+  <div>
+    <a href="https://maps.google.com/maps?q=Mariniersweg%20313%2C%203011%20NM%20Rotterdam" target="_blank" rel="noopener">Mariniersweg 313, 3011 NM Rotterdam</a>
+    <small class="cr">© 2026 onni — the art of beauty.</small>
+  </div>
+</div></footer>
+
+<!-- sticky mobile book bar -->
+<div class="mbar"><button class="btn btn-primary book-link"><span class="l-nl">Afspraak maken →</span><span class="l-en">Book appointment →</span></button></div>
+
+<!-- lightbox -->
+<div class="lb" id="lb">
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Prev"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <img id="lb-img" src="" alt="" />
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+/* ===== CONFIG — verander alleen deze regel met de echte Calendly-URL ===== */
+const BOOKING_URL = "https://calendly.com/onni-theartofbeauty";
+
+/* ===== smooth scroll ===== */
+const lenis=new Lenis({lerp:.09,smoothWheel:true});function raf(t){lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf);
+gsap.registerPlugin(ScrollTrigger);lenis.on('scroll',ScrollTrigger.update);
+
+/* ===== gallery data + render ===== */
+const GAL=[
+  {src:"emerald-gold",nl:"Smaragd & goud",en:"Emerald & gold",tall:true},
+  {src:"red-classic",nl:"Klassiek rood",en:"Classic red"},
+  {src:"mauve",nl:"Glossy mauve",en:"Glossy mauve"},
+  {src:"nude-french",nl:"Nude french",en:"Nude french"},
+  {src:"burgundy",nl:"Bordeaux gellak",en:"Burgundy gel",tall:true},
+  {src:"daisy",nl:"Bloemen · matte",en:"Floral · matte"},
+  {src:"abstract-pink",nl:"Abstracte art",en:"Abstract art"},
+  {src:"burgundy-deep",nl:"Diep bordeaux",en:"Deep burgundy"},
+  {src:"brown-glitter",nl:"Glitter almond",en:"Glitter almond"},
+  {src:"pink-leopard",nl:"Roze luipaard",en:"Pink leopard"},
+  {src:"pedicure-french",nl:"French pedicure",en:"French pedicure"},
+  {src:"milky-natural",nl:"Milky natural",en:"Milky natural"}
+];
+const grid=document.getElementById('gallery-grid');
+GAL.forEach((g,i)=>{
+  const t=document.createElement('div');
+  t.className='gtile reveal'+(g.tall?' tall':'');
+  t.dataset.i=i;
+  t.innerHTML=`<img src="assets/portfolio/${g.src}.jpg" alt="${g.en}" loading="lazy">
+    <span class="plus"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+    <span class="cap"><span class="l-nl">${g.nl}</span><span class="l-en">${g.en}</span></span>`;
+  grid.appendChild(t);
+});
+
+/* ===== reveals ===== */
+gsap.utils.toArray('.reveal').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%'}}));
+window.addEventListener('load',()=>{gsap.fromTo('[data-rev]',{y:46,opacity:0},{y:0,opacity:1,duration:1.1,ease:'power3.out',stagger:.1})});
+
+/* ===== nav shrink ===== */
+const nav=document.getElementById('nav');
+lenis.on('scroll',({scroll})=>{nav.classList.toggle('scrolled',scroll>40)});
+
+/* ===== magnetic ===== */
+if(window.matchMedia('(pointer:fine)').matches){document.querySelectorAll('.magnetic').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.25,y:(e.clientY-r.top-r.height/2)*.35,duration:.5})});b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.6,ease:'elastic.out(1,.4)'}))})}
+
+/* ===== anchor smooth ===== */
+function smooth(href){if(href==='#top'){lenis.scrollTo(0,{duration:1.2})}else{const el=document.querySelector(href);if(el)lenis.scrollTo(el,{offset:-72,duration:1.2})}}
+
+/* ===== language toggle ===== */
+const body=document.body;
+document.querySelectorAll('#lang button').forEach(btn=>btn.addEventListener('click',()=>{
+  const set=btn.dataset.set;body.setAttribute('data-lang',set);document.documentElement.lang=set;
+  document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('active',b.dataset.set===set));
+  ScrollTrigger.refresh();
+}));
+
+/* ===== menu tabs filter ===== */
+document.querySelectorAll('#tabs .tab').forEach(tab=>tab.addEventListener('click',()=>{
+  document.querySelectorAll('#tabs .tab').forEach(t=>t.classList.remove('active'));tab.classList.add('active');
+  const cat=tab.dataset.cat;
+  document.querySelectorAll('#menu .svc-row').forEach(r=>{r.hidden=!(cat==='all'||r.dataset.cat===cat)});
+  ScrollTrigger.refresh();
+}));
+
+/* ===== booking (Calendly) ===== */
+function openBooking(){
+  if(window.Calendly){Calendly.initPopupWidget({url:BOOKING_URL});}
+  else{window.open(BOOKING_URL,'_blank','noopener');}
+}
+document.querySelectorAll('.book-link').forEach(el=>el.addEventListener('click',e=>{
+  e.preventDefault();
+  const goInline=el.getAttribute('href')==='#book';
+  if(goInline){smooth('#book');}else{openBooking();}
+}));
+// inline embed
+function initInline(){
+  const host=document.querySelector('[data-booking-inline]');
+  if(host&&window.Calendly){Calendly.initInlineWidget({url:BOOKING_URL+'?hide_gdpr_banner=1&background_color=123c32&text_color=f5ecdc&primary_color=c9a86a',parentElement:host});}
+}
+const fb=document.getElementById('cal-fallback');if(fb)fb.href=BOOKING_URL;
+window.addEventListener('load',()=>{let n=0;const iv=setInterval(()=>{if(window.Calendly){initInline();clearInterval(iv)}else if(++n>40)clearInterval(iv)},150)});
+
+/* plain anchors (#) that aren't book-links */
+document.querySelectorAll('a[href^="#"]:not(.book-link)').forEach(a=>a.addEventListener('click',e=>{const h=a.getAttribute('href');if(!h||h.length<2)return;e.preventDefault();smooth(h)}));
+
+/* ===== lightbox ===== */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');let cur=0;
+function showLb(i){cur=(i+GAL.length)%GAL.length;const g=GAL[cur];lbImg.src=`assets/portfolio/${g.src}.jpg`;lbCap.textContent=body.getAttribute('data-lang')==='en'?g.en:g.nl;}
+function openLb(i){showLb(i);lb.classList.add('open');document.body.style.overflow='hidden';lenis.stop();}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow='';lenis.start();}
+grid.addEventListener('click',e=>{const t=e.target.closest('.gtile');if(t)openLb(+t.dataset.i)});
+document.getElementById('lb-close').onclick=closeLb;
+document.getElementById('lb-prev').onclick=e=>{e.stopPropagation();showLb(cur-1)};
+document.getElementById('lb-next').onclick=e=>{e.stopPropagation();showLb(cur+1)};
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')showLb(cur-1);if(e.key==='ArrowRight')showLb(cur+1)});
+</script>
+</body>
+</html>
