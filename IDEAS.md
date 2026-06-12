@@ -8,13 +8,13 @@
 - [ ] **Справжній логотип** — якщо є файл, заміна типографічного wordmark (зараз «onni» із золотою «i»)
 - [ ] Перевірити **точність цін** з Khristina (особливо чоловічий манікюр — зараз «op aanvraag»)
 - [ ] Власний **домен** (напр. onni.nl / onninails.nl) замість github.io
-- [ ] **Favicon** + OG-зображення (зараз OG = emerald-gold фото)
+- [x] **Favicon** ✅ (inline SVG, золота «o» на смарагді) + OG-зображення вже є (emerald-gold)
 
 ## 🟡 Should (швидкі цінні апгрейди)
 - [ ] **WhatsApp-кнопка** (wa.me) — найзручніший канал у NL, поряд з Calendly
 - [ ] **Відгуки/reviews** — секція довіри (Google reviews або скріни Instagram). Зараз її немає свідомо (не вигадувати)
 - [ ] **Подарункові сертифікати** (cadeaubon) — популярно в б'юті, легкий апсел
-- [ ] **Google Business Profile** + структуровані дані (LocalBusiness schema.org) для локального SEO «manicure Rotterdam»
+- [x] **LocalBusiness schema.org** ✅ (BeautySalon JSON-LD: Rotterdam, послуги, мови, IG) для локального SEO «manicure Rotterdam». Google Business Profile — ще треба завести (Khristina)
 - [ ] **Аналітика** — Plausible / GA4, щоб бачити конверсію в запис
 - [ ] **Сторінка з відео** — у тебе є багато .MP4/.MOV у Telegram (процес, рілзи). Hero-відео або секція
 - [ ] Окремі **SEO-meta NL/EN** + sitemap (зараз одна сторінка)
