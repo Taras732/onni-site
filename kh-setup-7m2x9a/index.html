@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>onni — запуск системи запису та оплати (для Христини)</title>
+<style>
+  :root{--bg:#0e2c24;--panel:#123c32;--gold:#c9a86a;--cream:#f5ecdc;--sage:#a9c3b4;--line:rgba(201,168,106,.28)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-weight:300}
+  .wrap{max-width:840px;margin:0 auto;padding:40px 22px 80px}
+  h1{font-size:2rem;font-weight:600;line-height:1.2;margin:0 0 6px}
+  h2{font-size:1.4rem;font-weight:600;color:var(--gold);margin:42px 0 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+  h3{font-size:1.05rem;font-weight:600;margin:22px 0 6px}
+  p,li{font-size:1rem}
+  .lead{color:var(--sage);font-size:1.08rem;margin-top:0}
+  a{color:var(--gold)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.96rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--gold);font-weight:600}
+  .tag{display:inline-block;font-size:.78rem;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--sage);margin-left:8px}
+  .ok{color:#8fd4a8}
+  .todo{color:var(--gold)}
+  ul{padding-left:20px}
+  .check li{margin:8px 0}
+  .muted{color:var(--sage);font-size:.9rem}
+  .big{font-size:1.15rem;font-weight:600;color:var(--cream)}
+  hr{border:none;border-top:1px solid var(--line);margin:36px 0}
+  .note{background:rgba(201,168,106,.08);border-left:3px solid var(--gold);padding:12px 16px;border-radius:8px;margin:14px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="muted">Приватна сторінка · лише для Христини</p>
+  <h1>onni — система запису та оплати</h1>
+  <p class="lead">Що вже працює, що потрібно від тебе для повного запуску, скільки це коштує і як усе влаштовано.</p>
+
+  <h2>1. Як це працюватиме</h2>
+  <div class="card">
+    <p>Клієнт пише в <b>WhatsApp</b> або заходить на сайт <b>onni.beauty</b>:</p>
+    <ol>
+      <li>AI-помічник (бот) відповідає на питання — послуги, ціни, техніки, догляд, фото робіт.</li>
+      <li>Веде клієнта до запису на твою сторінку <b>cal.onni.beauty</b> (онлайн-календар).</li>
+      <li>Клієнт обирає вільний час → вносить <b>депозит</b> (онлайн-оплата) → отримує підтвердження.</li>
+      <li>Нагадування приходить автоматично. Перенесення/скасування — теж онлайн.</li>
+    </ol>
+    <p class="muted">Це зменшує неявки (бо є передоплата), економить твій час на дзвінки й листування, і працює 24/7.</p>
+  </div>
+
+  <h2>2. Що вже готово <span class="tag ok">безкоштовно</span></h2>
+  <table>
+    <tr><th>Компонент</th><th>Стан</th></tr>
+    <tr><td>Сайт <b>onni.beauty</b> (NL/EN, послуги, ціни, фото, карта)</td><td class="ok">✅ працює</td></tr>
+    <tr><td>WhatsApp AI-помічник (консультує клієнтів)</td><td class="ok">✅ працює</td></tr>
+    <tr><td>Онлайн-календар <b>cal.onni.beauty</b> (запис, перенесення)</td><td class="ok">✅ працює</td></tr>
+    <tr><td>Хостинг, домен, AI</td><td class="ok">✅ налаштовано</td></tr>
+  </table>
+
+  <h2>3. Що потрібно від тебе для повного запуску</h2>
+
+  <h3>А. Stripe — для онлайн-оплати депозиту <span class="tag todo">обов'язково для оплати</span></h3>
+  <div class="card">
+    <p>Щоб приймати депозит онлайн, потрібен акаунт <b>Stripe</b> (платіжний сервіс) на твоє ім'я/бізнес. Гроші клієнтів ідуть <b>напряму тобі</b> на рахунок.</p>
+    <p>Для реєстрації Stripe знадобиться:</p>
+    <ul>
+      <li><b>KvK-nummer</b> — реєстрація в Kamer van Koophandel (якщо ще немає ZZP/eenmanszaak — це окремий крок).</li>
+      <li><b>IBAN</b> — банківський рахунок для виплат.</li>
+      <li><b>Документ, що посвідчує особу</b> (паспорт / ID) — для верифікації Stripe.</li>
+      <li>Адреса й контактні дані бізнесу.</li>
+      <li>(за наявності) <b>BTW-nummer</b>.</li>
+    </ul>
+    <p class="muted">Верифікація Stripe може зайняти від кількох годин до кількох днів — це нормально. Поки Stripe не готовий, оплату не вмикаємо (решта працює).</p>
+    <p>У Stripe треба увімкнути <b>iDEAL</b> (головний метод оплати в Нідерландах) + банківські картки.</p>
+  </div>
+
+  <h3>Б. Рішення: як саме бронює бот <span class="tag todo">вибір</span></h3>
+  <div class="card">
+    <table>
+      <tr><th>Варіант</th><th>Що дає</th><th>Вартість</th></tr>
+      <tr>
+        <td><b>Гібрид</b> (зараз)</td>
+        <td>Бот консультує і дає посилання на твій календар, де клієнт бронює й платить депозит.</td>
+        <td class="ok">€0</td>
+      </tr>
+      <tr>
+        <td><b>Повна автоматизація</b></td>
+        <td>Бот сам показує вільні слоти й бронює прямо в переписці WhatsApp (без переходу на сайт).</td>
+        <td class="todo">~$15/міс*</td>
+      </tr>
+    </table>
+    <p class="muted">* Повна автоматизація потребує платного доступу до API календаря (Cal.com Pro, ~$15/міс). Гібрид працює безкоштовно і покриває 90% потреби. Рекомендація: <b>почати з гібриду</b>, перейти на повну автоматизацію пізніше, якщо буде потреба.</p>
+  </div>
+
+  <h3>В. Підтвердити деталі</h3>
+  <div class="card">
+    <ul>
+      <li><b>Графік роботи:</b> зараз Пн–Сб 08:00–20:00, Нд вихідний — підтвердь або зміни.</li>
+      <li><b>Депозит:</b> зараз закладено <b>70%</b> від вартості послуги (зараховується в оплату). Підтвердь % .</li>
+      <li><b>Ціни:</b> звірити, особливо чоловічий манікюр (зараз «на запит»).</li>
+      <li>(опційно) <b>Google Calendar</b> — щоб усі записи дублювались у твій Google-календар.</li>
+    </ul>
+  </div>
+
+  <h2>4. Скільки це коштує</h2>
+  <table>
+    <tr><th>Стаття</th><th>Вартість</th><th>Примітка</th></tr>
+    <tr><td>Сайт, бот, календар, хостинг, домен, AI</td><td class="ok">€0 для тебе</td><td>налаштовано й оплачено</td></tr>
+    <tr><td><b>Stripe</b> (оплата депозиту)</td><td>без абонплати</td><td>комісія за транзакцію: iDEAL ≈ €0,29; картки ≈ 1,5% + €0,25</td></tr>
+    <tr><td><b>Cal.com Pro</b> (лише для повної автоматизації бота)</td><td>~$15/міс</td><td>опційно; гібрид безкоштовний</td></tr>
+  </table>
+  <p class="note big">Мінімум для повного запуску з оплатою: <b>€0 щомісячно</b> + комісія Stripe за кожен депозит. Платні $15/міс — лише якщо захочеш, щоб бот бронював повністю в чаті.</p>
+
+  <h2>5. Політика депозиту та скасування</h2>
+  <div class="card">
+    <p>При бронюванні клієнт бачить і приймає правило (текст для клієнтів, NL):</p>
+    <div class="note">
+      <p style="margin:0"><i>«Aanbetaling wordt verrekend met je behandeling. Annuleren of verzetten kan tot 24 uur vooraf. Bij no-show of annulering binnen 24 uur vervalt de aanbetaling.»</i></p>
+    </div>
+    <p>Тобто: депозит зараховується в оплату; скасувати/перенести можна щонайменше за 24 год; при неявці або пізньому скасуванні <b>депозит не повертається</b>.</p>
+    <div class="note">
+      ⚠️ <b>Важливо (юридично):</b> у Нідерландах таке правило дозволене, <b>якщо</b> воно чітко показане клієнту <b>до</b> оплати (в <i>algemene voorwaarden</i>). Перед запуском варто коротко звірити формулювання з твоїми загальними умовами / при потребі — з юристом, щоб усе відповідало споживчому праву NL. Ми закладемо текст так, щоб він показувався перед оплатою.
+    </div>
+  </div>
+
+  <h2>6. Твій чеклист (по порядку)</h2>
+  <div class="card check">
+    <ul>
+      <li>☐ Вирішити: <b>гібрид</b> (безкоштовно) чи <b>повна автоматизація</b> (~$15/міс).</li>
+      <li>☐ Створити <b>Stripe</b>-акаунт + пройти верифікацію (KvK, IBAN, ID, iDEAL).</li>
+      <li>☐ Підтвердити <b>графік</b> (Пн–Сб 08:00–20:00?).</li>
+      <li>☐ Підтвердити <b>депозит 70%</b> і правило неповернення.</li>
+      <li>☐ Звірити <b>ціни</b> (особливо чоловічий манікюр).</li>
+      <li>☐ (опційно) дозволити <b>Google Calendar</b> синхронізацію.</li>
+    </ul>
+    <p class="muted">Як будуть Stripe-дані — Тарас підключить оплату/депозит, і система запрацює повністю. Решта вже готова й працює.</p>
+  </div>
+
+  <hr/>
+  <p class="muted">Питання — пиши Тарасу. Ця сторінка приватна; не індексується і доступна лише за цим посиланням.</p>
+
+</div>
+</body>
+</html>
