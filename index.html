@@ -20,8 +20,9 @@
   "image": "assets/portfolio/emerald-gold.jpg",
   "url": "https://taras732.github.io/onni-site/",
   "priceRange": "€€",
-  "address": { "@type": "PostalAddress", "addressLocality": "Rotterdam", "addressCountry": "NL" },
+  "address": { "@type": "PostalAddress", "streetAddress": "Mariniersweg 313", "postalCode": "3011 NM", "addressLocality": "Rotterdam", "addressCountry": "NL" },
   "areaServed": { "@type": "City", "name": "Rotterdam" },
+  "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" }],
   "knowsLanguage": ["nl", "en"],
   "sameAs": ["https://www.instagram.com/onni_theartofbeauty/"],
   "makesOffer": [
@@ -667,8 +668,8 @@ footer{border-top:1px solid var(--line);padding:60px 0 40px;background:var(--bg-
 
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-const BOOKING_URL = "https://calendly.com/onni-theartofbeauty";
-const BOOKING_LIVE = false;
+const BOOKING_URL = "https://calendly.com/onni-theartofbeauty/afspraak";
+const BOOKING_LIVE = true;
 const body=document.body;
 const reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 

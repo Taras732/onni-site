@@ -2,3 +2,9 @@
 Thumbs.db
 *.log
 node_modules/
+
+_archive/
+calendly-setup.md
+_full.png
+_cmp_*.png
+_shot_*.png
