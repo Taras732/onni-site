@@ -731,7 +731,8 @@ burger.addEventListener('click',openMenu);mmClose.addEventListener('click',close
 mm.querySelectorAll('a,.mm-book').forEach(a=>a.addEventListener('click',closeMenu));
 
 const BOOKING_BRAND='?hide_gdpr_banner=1&background_color=123c32&text_color=f5ecdc&primary_color=c9a86a';
-function openBooking(){if(window.Calendly){Calendly.initPopupWidget({url:BOOKING_URL+BOOKING_BRAND});}else{window.open(BOOKING_URL,'_blank','noopener');}}
+function ensureCalendly(cb){if(window.Calendly){cb();return;}if(!document.querySelector('script[data-cal-loader]')){var s=document.createElement('script');s.src='https://assets.calendly.com/assets/external/widget.js';s.setAttribute('data-cal-loader','1');document.body.appendChild(s);}var n=0,iv=setInterval(function(){if(window.Calendly){clearInterval(iv);cb();}else if(++n>50){clearInterval(iv);window.open(BOOKING_URL+BOOKING_BRAND,'_blank','noopener');}},100);}
+function openBooking(){ensureCalendly(function(){Calendly.initPopupWidget({url:BOOKING_URL+BOOKING_BRAND});});}
 document.querySelectorAll('.book-link').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();openBooking();}));
 function initInline(){const host=document.querySelector('[data-booking-inline]'),cta=document.getElementById('book-cta');if(host&&window.Calendly){if(cta)cta.style.display='none';host.style.display='block';Calendly.initInlineWidget({url:BOOKING_URL+BOOKING_BRAND,parentElement:host});}}
 if(BOOKING_LIVE){window.addEventListener('load',()=>{let n=0;const iv=setInterval(()=>{if(window.Calendly){initInline();clearInterval(iv)}else if(++n>40)clearInterval(iv)},150)});}
